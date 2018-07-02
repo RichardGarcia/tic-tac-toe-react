@@ -6,12 +6,13 @@ const StyledSquare = styled.div`
   border-style: solid;
   border-width: 0 ${props => (props.index % 3 === 2 ? 0 : '2px')}
     ${props => (props.index < 6 ? '2px' : 0)} 0;
-  color: ${props => (props.player === 'x' ? 'green' : 'red')};
+  color: ${props =>
+    props.player === 'x' ? 'hsla(6, 59%, 50%, 1)' : 'hsla(145, 63%, 32%, 1)'};
   font-size: 16vh;
   font-weight: bold;
   line-height: 20vh;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
 `
 StyledSquare.displayName = 'StyledSquare'
 
