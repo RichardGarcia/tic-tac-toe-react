@@ -1,7 +1,72 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// import {CaretLeft} from 'styled-icons/fa-solid/CaretLeft'
+// import {CaretRight} from 'styled-icons/fa-solid/CaretRight'
+
+import * as faSolid from 'styled-icons/fa-solid'
+import * as muiIcon from 'styled-icons/material'
+
 import { Board, Square } from '..'
+
+const CaretLeftIcon = styled(faSolid.CaretLeft)`
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  background: #7abcff;
+  background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #335fbf 100%);
+  background: -webkit-linear-gradient(
+    top,
+    #7abcff 0%,
+    #60abf8 44%,
+    #335fbf 100%
+  );
+  background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #335fbf 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr='#7abcff',
+      endColorstr='#335fbf',
+      GradientType=0
+    );
+  &:hover {
+    background: #335fbf;
+    background: -moz-linear-gradient(
+      top,
+      #335fbf 0%,
+      #60abf8 56%,
+      #7abcff 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      #335fbf 0%,
+      #60abf8 56%,
+      #7abcff 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      #335fbf 0%,
+      #60abf8 56%,
+      #7abcff 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr='#335fbf',
+        endColorstr='#7abcff',
+        GradientType=0
+      );
+  }
+`
+const CaretRightIcon = styled(faSolid.CaretRight)`
+  color: green;
+  border: 2px solid green;
+  border-radius: 6px;
+  &:hover {
+    color: red;
+    border: 2px solid red;
+  }
+`
+const AndroidIcon = styled(muiIcon.Android)`
+  color: green;
+`
 
 const StyledApp = styled.div`
   display: grid;
@@ -28,6 +93,13 @@ export default function App () {
         <Square index={7} player='o' />
         <Square index={8} player='x' />
       </Board>
+
+      <p>testing icon</p>
+      <CaretLeftIcon size='36' title='Caret left icon' />
+      <br />
+      <CaretRightIcon size='36' title='Caret right icon' />
+      <br />
+      <AndroidIcon size='48' title='Caret right icon' />
     </StyledApp>
   )
 }
