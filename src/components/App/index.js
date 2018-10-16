@@ -79,6 +79,20 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
+const SmallBtn = styled.button`
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 220px;
+  ::before {
+    content: '🚀';
+  }
+`
 export default function App () {
   return (
     <StyledApp>
@@ -100,6 +114,10 @@ export default function App () {
       <CaretRightIcon size='36' title='Caret right icon' />
       <br />
       <AndroidIcon size='48' title='Caret right icon' />
+      <br />
+      <SmallBtn>this is a button</SmallBtn>
+      <br />
+      <br />
     </StyledApp>
   )
 }
